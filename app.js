@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb+srv://chanakya:chinnasandy123@cluster0.elwih.mongodb.net/todolist?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://chanakya:chinnasandy123@cluster0.elwih.mongodb.net/todolist', { useNewUrlParser: true });
 
 const itemSchema = ({
     name: String
@@ -122,6 +122,6 @@ app.get("/about", function(req, res) {
     res.render("about");
 });
 
-app.listen(process.env.PORT, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log("Server started on port 3000 .... ... .. .");
 });
