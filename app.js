@@ -121,8 +121,7 @@ app.get("/work", function(req, res) {
 app.get("/about", function(req, res) {
     res.render("about");
 });
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, function() {
+app.listen(process.env.PORT, function() {
     console.log("Server started on port 3000 .... ... .. .");
 });
