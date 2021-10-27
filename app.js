@@ -10,11 +10,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://chanakya:chinnasandy123@cluster0.elwih.mongodb.net/myFirstDatabase?retryWrites=true&w=majority").then(() => {
-    console.log("connection success ... .. .");
-}).catch((err) => {
-    console.log("no connection ...!");
-});
+mongoose.connect("mongodb+srv://chanakya:chinnasandy123@cluster0.elwih.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 const itemSchema = ({
     name: String
